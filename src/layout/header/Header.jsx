@@ -10,15 +10,19 @@ function Header() {
   return (
     <header className='bg-grey-light border-b border-gray-200'>
       <div className='container m-auto flex justify-between'>
-        <Logo></Logo>
-        <Search></Search>
-        <div>
-          <Link to={'/login'}>
-            <UserIcon></UserIcon>
+        <div className='w-[150px]'>
+          <Logo></Logo>
+        </div>
+        <div className='w-[calc(100%-500px)]'>
+          <Search></Search>
+        </div>
+        <div className='w-[150px] py-9 flex justify-between'>
+          <Link to={'/login'} className='flex'>
+            <UserIcon className='mr-2'></UserIcon>
             Login
           </Link>
-          <Link to={'/cart'}>
-            <CartIcon></CartIcon>
+          <Link to={'/cart'} className='flex'>
+            <CartIcon className='mr-2'></CartIcon>
             Cart
           </Link>
         </div>
