@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import './App.css'
 import Home from "./pages/Home.jsx";
-import Header from "./layout/Header.jsx";
+import Header from "./layout/header/Header.jsx";
 import Products from "./pages/Products.jsx";
 import Product from "./pages/Product.jsx";
 
