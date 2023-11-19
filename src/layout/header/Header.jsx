@@ -4,6 +4,7 @@ import Logo from "./Logo.jsx";
 import Search from "./Search.jsx";
 import CartIcon from "../../components/icons/CartIcon.jsx";
 import UserIcon from "../../components/icons/UserIcon.jsx";
+import CategoryNavigation from "./CategoryNavigation.jsx";
 
 function Header() {
 
@@ -18,14 +19,21 @@ function Header() {
         </div>
         <div className='w-[150px] py-9 flex justify-between'>
           <Link to={'/login'} className='flex'>
-            <UserIcon className='mr-2'></UserIcon>
+            <span  className='mr-2'>
+              <UserIcon></UserIcon>
+            </span>
             Login
           </Link>
           <Link to={'/cart'} className='flex'>
-            <CartIcon className='mr-2'></CartIcon>
+            <span  className='mr-2'>
+              <CartIcon></CartIcon>
+            </span>
             Cart
           </Link>
         </div>
+      </div>
+      <div className='container m-auto flex'>
+        <CategoryNavigation></CategoryNavigation>
       </div>
     </header>
   )
