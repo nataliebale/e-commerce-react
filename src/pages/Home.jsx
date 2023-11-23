@@ -5,11 +5,10 @@ import {useEffect, useState} from "react";
 import {getProducts} from "../services/productService.js";
 
 function Home() {
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     getProducts().then(res => {
-      console.log(res.data)
       setProducts(res.data)
     })
   }, []);
@@ -19,8 +18,9 @@ function Home() {
       {
         products.map(item => {
           return (
-            <div className='w-[20%]'>
+            <div key={item.id} className='w-[20%]'>
               <CardLarge
+                id={item.id}
                 image={item.image}
                 title={item.title}
                 category={item.category}
