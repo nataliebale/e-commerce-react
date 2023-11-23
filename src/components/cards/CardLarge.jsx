@@ -9,7 +9,7 @@ function CardLarge({id, image, title, category, price}) {
     >
       <div className='p-4'>
         <div
-          className='pt-[80%] bg-cover bg-center'
+          className='pt-[80%] bg-contain bg-no-repeat bg-center'
           style={{backgroundImage: `url(${ image })`}}
         ></div>
         <div className='text-[18px] pt-4 bold'>
