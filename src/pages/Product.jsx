@@ -1,24 +1,50 @@
-import './../assets/styles/home.css'
-import CardLarge from "../components/cards/CardLarge.jsx";
+import './../assets/styles/home.css';
+import { useEffect, useState } from "react";
+import { getProductById } from "../services/productService.js";
+import { useParams } from "react-router-dom";
 
 function Product() {
-  const card = {
-    image: 'https://picsum.photos/400/300',
-    title: 'Card title',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
-    category: 'Category',
-    price: '100$'
-  };
+  const [product, setProduct] = useState();
+  const { id } = useParams();
+
+  useEffect(() => {
+    if (id) {
+      getProductById(id).then(res => {
+        setProduct(res.data);
+      });
+    }
+  }, [id]);
+
+  const loading = () => {
+    return (
+      <div className='text-center pt-[200px]'>
+        Loading...
+      </div>
+    );
+  }
+
+  const loadProduct = () => {
+    return (
+      <div className='flex flex-row justify-between'>
+        <div className='w-[50%]'>
+          <img src={ product?.image } alt={ product?.title } />
+        </div>
+        <div className='w-[calc(50%-20px)]'>
+          <h1>
+            { product?.title }
+          </h1>
+          <p>{ product?.description }</p>
+          <p>Category: { product?.category }</p>
+          <p>Price: { product?.price } $</p>
+          <p>Rating: { product?.rating?.rate }*</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
-      <CardLarge
-        image={card.image}
-        title={card.title}
-        description={card.description}
-        category={card.category}
-        price={card.price}
-      ></CardLarge>
+      { product ? loadProduct() : loading() }
     </>
   )
 }
