@@ -1,10 +1,10 @@
 import './../../assets/styles/cardLarge.css'
 import { Link } from "react-router-dom";
 
-function CardLarge({image, title, category, price}) {
+function CardLarge({id, image, title, category, price}) {
   return (
     <Link
-      to={`/products/${1}`}
+      to={`/products/${id}`}
       className='block mt-4 border rounded-[5px] overflow-hidden'
     >
       <div className='p-4'>
