@@ -7,3 +7,7 @@ export const getProducts = () => {
 export const getProductById = (id) => {
   return axios.get(`https://fakestoreapi.com/products/${id}`);
 }
+
+export const getProductByCategory = (category) => {
+  return axios.get(`https://fakestoreapi.com/products/category/${id}`);
+}
