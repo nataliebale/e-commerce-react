@@ -9,7 +9,7 @@ import CategoryNavigation from "./CategoryNavigation.jsx";
 function Header() {
 
   return (
-    <header className='bg-grey-light border-b border-gray-200'>
+    <header className='border-b border-gray-200'>
       <div className='container m-auto flex justify-between'>
         <div className='w-[150px]'>
           <Logo></Logo>
