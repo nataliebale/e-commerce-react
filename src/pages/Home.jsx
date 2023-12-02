@@ -1,8 +1,9 @@
 import './../assets/styles/home.css'
 import CardLarge from "../components/cards/CardLarge.jsx";
-import { Link } from "react-router-dom";
 import {useEffect, useState} from "react";
 import {getProducts} from "../services/productService.js";
+import Banner from "../components/banner/Banner.jsx";
+import Subscription from "../components/subscription/Subscription.jsx";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -14,23 +15,31 @@ function Home() {
   }, []);
 
   return (
-    <div className='flex flex-row flex-wrap'>
-      {
-        products.map(item => {
-          return (
-            <div key={item.id} className='w-[20%]'>
-              <CardLarge
-                id={item.id}
-                image={item.image}
-                title={item.title}
-                category={item.category}
-                price={item.price}
-              ></CardLarge>
-            </div>
-          )
-        })
-      }
-    </div>
+    <>
+      <Banner></Banner>
+
+      <section className='container mx-auto mt-[40px] mb-[50px]'>
+        <div className='flex flex-row flex-wrap mx-[-9px]'>
+        {
+          products.map(item => {
+            return (
+              <div key={item.id} className='w-[calc(20%-18px)] mx-[9px]'>
+                <CardLarge
+                  id={item.id}
+                  image={item.image}
+                  title={item.title}
+                  category={item.category}
+                  price={item.price}
+                ></CardLarge>
+              </div>
+            )
+          })
+        }
+      </div>
+      </section>
+
+      <Subscription></Subscription>
+    </>
   )
 }
 
