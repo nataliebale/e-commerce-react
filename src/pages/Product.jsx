@@ -25,7 +25,8 @@ function Product() {
 
   const loadProduct = () => {
     return (
-      <div className='flex flex-row justify-between'>
+      <section className='container mx-auto mt-[40px] mb-[50px]'>
+        <div className='flex flex-row justify-between'>
         <div className='w-[50%]'>
           <img src={ product?.image } alt={ product?.title } />
         </div>
@@ -39,6 +40,7 @@ function Product() {
           <p>Rating: { product?.rating?.rate }*</p>
         </div>
       </div>
+      </section>
     );
   }
 
