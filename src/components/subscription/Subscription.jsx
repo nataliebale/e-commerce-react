@@ -1,5 +1,4 @@
 import './../../assets/styles/cardLarge.css'
-import bannerImage from '../../assets/images/gradient-black-background-with-wavy-lines_23-2149138436.jpg';
 import SearchIcon from "../icons/SearchIcon.jsx";
 
 function Subscription() {
