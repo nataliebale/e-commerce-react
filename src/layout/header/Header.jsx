@@ -17,18 +17,19 @@ function Header() {
         <div className='w-[calc(100%-500px)]'>
           <Search></Search>
         </div>
-        <div className='w-[150px] py-9 flex justify-between'>
-          <Link to={'/login'} className='flex'>
-            <span  className='mr-2'>
+        <div className='py-8 flex justify-between'>
+          <Link to={'/login'} className='flex text-[13px] background-gradient rounded-[5px] text-white px-2 py-1 mr-2'>
+            <span className='mr-2 mt-[4px]'>
               <UserIcon></UserIcon>
             </span>
-            Login
+            <span className='mt-[2px]'>
+              Sign in
+            </span>
           </Link>
-          <Link to={'/cart'} className='flex'>
-            <span  className='mr-2'>
+          <Link to={'/cart'} className='flex bg-grey-light uppercase rounded-[5px] px-2 py-1'>
+            <span  className='mt-[4px]'>
               <CartIcon></CartIcon>
             </span>
-            Cart
           </Link>
         </div>
       </div>
