@@ -6,7 +6,6 @@ function Subscription() {
 
   return (
     <div className="relative w-full bg-grey-light py-[50px]">
-      {/*<div className="absolute w-full bg-grey-light h-[150%] t-[200px] z-[-1]"></div>*/}
       <div
         className="container m-auto py-[80px] px-[80px] rounded-[5px] background-gradient"
       >
