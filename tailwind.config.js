@@ -11,7 +11,7 @@ export default {
         "grey-light": "#e7ebef",
         // "dark-blue": "#2b2731"
         "dark-blue": "#141422",
-        "dark-grey": "#413d46",
+        "dark-grey": "#25252b",
         // "grey-light": "#ebebeb",
         // "grey-light": "#ededed",
         // "grey-light": "#f3efff",
